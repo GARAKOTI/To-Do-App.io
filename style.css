@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins&family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+}
+.container {
+  background-image: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%);
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.main {
+  background: #fff;
+  width: 100%;
+  max-width: 540px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.main h2 {
+  color: #fd6585;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.main h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.taskAdder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e6e9ed;
+  border-radius: 30px;
+  padding-left: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.taskAdder input {
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 40px;
+  background: transparent;
+}
+.btn {
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background: #fd6585;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+  align-items: center;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 12px 8px 12px 50px;
+  user-select: none; /*for preventing copy*/
+  position: relative;
+}
+ul li::before {
+  content: " ";
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: absolute;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+li.checked::before {
+  background-image: url(images/checked.png);
+}
+ul li span {
+  position: absolute;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  top: 5px;
+  right: 0;
+  background-color: #e6e9ed;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 50%;
+  line-height: 35px;
+  border: 1px solid #555;
+}
+
+ul li span:hover {
+  background: #fd6585;
+}
